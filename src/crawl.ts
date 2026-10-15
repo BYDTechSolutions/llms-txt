@@ -235,11 +235,11 @@ export async function crawl(options: CrawlOptions): Promise<CrawlResult> {
       } catch (error) {
         return { skip: { url, reason: 'fetch-error', detail: (error as Error).message } };
       }
-      if (!res.ok) return { skip: { url, reason: 'http-error', detail: `HTTP ${res.status}` } };
       const finalUrl = normalize(res.url, origin) ?? url;
       if (new URL(finalUrl).origin !== origin.origin) {
         return { skip: { url, reason: 'other-host', detail: `redirected to ${finalUrl}` } };
       }
+      if (!res.ok) return { skip: { url, reason: 'http-error', detail: `HTTP ${res.status}` } };
       if (!HTML_TYPES.test(res.contentType)) {
         return { skip: { url, reason: 'not-html', detail: res.contentType || 'no content type' } };
       }

@@ -1,0 +1,19 @@
+{
+  "name": "Example",
+  "summary": "Example is a library for building small web apps.",
+  "site": "https://example.com",
+  "sections": [
+    {
+      "title": "Docs",
+      "links": [
+        { "title": "Quick start", "url": "/docs/quick-start.md", "notes": "Install, configure and run" },
+        { "title": "API reference", "url": "/docs/api.md" }
+      ]
+    },
+    {
+      "title": "Examples",
+      "links": [{ "title": "Todo app", "url": "https://github.com/example/todo", "notes": "A complete small app" }]
+    }
+  ],
+  "optional": [{ "title": "Changelog", "url": "/changelog.md" }]
+}

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "llms": "llms-txt build",
+    "llms:crawl": "llms-txt build --site https://example.com --out-dir public",
+    "llms:lint": "llms-txt lint public/llms.txt",
+    "llms:lint:live": "llms-txt lint https://example.com/llms.txt --check-links --format github"
+  }
+}

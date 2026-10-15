@@ -373,7 +373,7 @@ export interface CheckLinksOptions {
 
 /**
  * Requests every resolved http(s) link in a lint result (`HEAD`, then `GET`
- * when `HEAD` is refused) and returns a `dead-link` warning for each one that
+ * when `HEAD` fails) and returns a `dead-link` warning for each one that
  * fails or answers HTTP 400 or above. Each distinct URL is requested once.
  */
 export async function checkLinks(result: LintResult, options: CheckLinksOptions = {}): Promise<LintIssue[]> {
@@ -382,8 +382,8 @@ export async function checkLinks(result: LintResult, options: CheckLinksOptions 
   const base = { fetch: options.fetch, timeoutMs: options.timeoutMs ?? 10_000, userAgent: options.userAgent ?? USER_AGENT };
   const outcomes = await mapLimit(unique, options.concurrency ?? 4, async (url) => {
     try {
-      const head = await get(url, { ...base, method: 'HEAD' });
-      if (head.ok) return null;
+      const head = await get(url, { ...base, method: 'HEAD' }).catch(() => null);
+      if (head?.ok) return null;
       const res = await get(url, base);
       return res.ok ? null : `answered HTTP ${res.status}`;
     } catch (error) {

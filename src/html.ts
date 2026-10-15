@@ -77,7 +77,7 @@ const LEGACY = new Set(['amp', 'lt', 'gt', 'quot', 'nbsp', 'copy', 'reg']);
 
 /**
  * Decodes HTML character references: numeric ones (`&#38;`, `&#x26;`) and a
- * table of about 150 common named ones. Unknown names are left as they are.
+ * table of about 140 common named ones. Unknown names are left as they are.
  */
 export function decodeEntities(text: string): string {
   if (!text.includes('&')) return text;
