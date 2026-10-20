@@ -1,5 +1,5 @@
 /** The package version. Kept equal to package.json by a test. */
-export const VERSION = '0.1.0';
+export const VERSION = '0.1.1';
 
 /** The product token this package uses in `User-Agent` headers and, by default, to read robots.txt. */
 export const PRODUCT_TOKEN = 'llms-txt';

@@ -1,6 +1,6 @@
 {
   "name": "@bydtech/llms-txt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Build and lint llms.txt files: from a config, or by crawling your sitemap into llms.txt and llms-full.txt.",
   "keywords": [
     "llms.txt",

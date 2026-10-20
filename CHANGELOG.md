@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-21
+
+### Changed
+
+- Published from GitHub Actions through npm trusted publishing, with a
+  provenance attestation linking the package to this repository. No code changes.
+
 ## [0.1.0] - 2026-10-16
 
 ### Added
@@ -18,5 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - API: `build`, `buildFull`, `crawl`, `lint`, `checkLinks`, `formatReport`, `htmlToMarkdown`, `extractPage`, `toResponse`, `defineConfig`, `loadConfig`, `parseRobots`, `isAllowed`, `readSitemap` and more.
 - A Next.js App Router example serving `/llms.txt` with `toResponse`.
 
-[Unreleased]: https://github.com/BYDTechSolutions/llms-txt/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/BYDTechSolutions/llms-txt/releases/tag/v0.1.0
+[Unreleased]: https://github.com/BYDTechSolutions/llms-txt/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/BYDTechSolutions/llms-txt/releases/tag/v0.1.1
+[0.1.0]: https://github.com/BYDTechSolutions/llms-txt/tree/e79f4b5618834bfb50e95e51c74ae3a74358a42e
